@@ -12,7 +12,15 @@ const App = () => {
       <div>
         <ShowCount init={init} />
         <div className='contain-btns'>
-          <Button onClick={() => setInit(0)} bg='indigo' txtc='white'>
+          <Button
+            onClick={() => {
+              if (init === 0) {
+                alert('Ya es cero😅')
+              } else setInit(0)
+            }}
+            bg='indigo'
+            txtc='white'
+          >
             Restart
           </Button>
           <Button
