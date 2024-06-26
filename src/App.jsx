@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './index.css'
 import Button from './components/button/Button'
+import ShowCount from './components/showCount/ShowCount'
 
 const App = () => {
   const [init, setInit] = useState(0)
@@ -9,7 +10,7 @@ const App = () => {
     <div className='container'>
       <h1>My first applicaction</h1>
       <div>
-        <h2>You clicked here {init} time</h2>
+        <ShowCount init={init} />
         <div className='contain-btns'>
           <Button onClick={() => setInit(0)} bg='indigo' txtc='white'>
             Restart
